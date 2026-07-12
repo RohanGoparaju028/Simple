@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build -t test my-app:${{ github.sha }} . 
+      run: docker build -t  my-app:${{ github.sha }} . 
     - name: Test the image
       run: docker run --rm my-app:${{ github.sha }} echo "Image built and runs successfully!"
